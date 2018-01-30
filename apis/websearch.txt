@@ -1,0 +1,9 @@
+{
+"url":"https://www.googleapis.com/customsearch/v1?",
+"search_term":"q",
+"parameters":{
+	"key": "AIzaSyD0H_G1JKCgklUtvDFVcdoMtto3ooyalZ8",
+        "cx": "007585794764902922731:lhcpji7ohgq",
+	"q": "test search"
+}
+}

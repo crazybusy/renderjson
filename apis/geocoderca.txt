@@ -1,0 +1,7 @@
+{
+"url":"https://geocoder.ca/?",
+"search_term":"locate",
+"parameters":{
+	"json":"1"   
+}
+}

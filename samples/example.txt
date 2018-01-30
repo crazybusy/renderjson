@@ -1,0 +1,1 @@
+{"app_url": "", "models": [{"perms": {"add": true, "change": true, "delete": true}, "add_url": "/admin/cms/news/add/", "admin_url": "/admin/cms/news/", "name": ""}], "has_module_perms": true, "name": "CMS"}

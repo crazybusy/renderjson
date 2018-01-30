@@ -1,0 +1,19 @@
+{
+  "timestamp": 1412282459,
+  "res": [
+    {
+      "group": "1",
+      "catlist": [
+        {
+          "cat": "1",
+          "start": "none",
+          "stop": "none",
+          "points": [
+              {"point": "1", "start": "13.00", "stop": "13.35"},
+              {"point": "2", "start": "11.00", "stop": "14.35"}
+          ]
+        }
+      ]
+    }
+  ]
+}

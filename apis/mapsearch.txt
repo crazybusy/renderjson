@@ -1,0 +1,8 @@
+{
+"url":"https://maps.googleapis.com/maps/api/geocode/json?",
+"search_term":"address",
+"parameters":{
+	"key": "AIzaSyD0H_G1JKCgklUtvDFVcdoMtto3ooyalZ8",        
+	"address":"London, England"     
+}
+}
