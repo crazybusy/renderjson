@@ -25,7 +25,7 @@ class json_cli():
                 self.handle_pair(level+1,  item, value[item],  path)
         elif type == list:
             for i in value:                
-                self.handle_pair(level+1,"list index: " +
+                self.handle_pair(level+1, "list/" + 
                                  str(value.index(i)),i,  path)
         else:
             if self.mode == "SHOW":
@@ -57,7 +57,9 @@ class json_cli():
     
     
     def render(self,  level, type, key, value, path):
-        print("{}: {}({}): {}".format(level, path, type,  value))
+        print("{}: {}: {}".format(level, path,
+#Added encode to supppor web queries as it was erroring out without it                                  
+                                      str(value).encode("utf-8")))
         return
 
     def load_file(self, data_file):

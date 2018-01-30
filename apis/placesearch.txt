@@ -1,0 +1,8 @@
+{
+"url":"https://maps.googleapis.com/maps/api/place/textsearch/json?",
+"search_term":"query",
+"parameters":{
+	"key": "AIzaSyD0H_G1JKCgklUtvDFVcdoMtto3ooyalZ8",        
+	"query":"restaurants near INA"     
+}
+}

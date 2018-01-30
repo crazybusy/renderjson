@@ -1,0 +1,8 @@
+{
+"url":"https://maps.googleapis.com/maps/api/place/details/json?",
+"search_term":"placeid",
+"parameters":{
+	"key": "AIzaSyD0H_G1JKCgklUtvDFVcdoMtto3ooyalZ8",        
+	"placeid":"ChIJmfM7UYIdDTkRkeHFRrGj5g0"     
+}
+}
