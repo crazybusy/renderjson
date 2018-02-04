@@ -14,8 +14,6 @@ class json_gui(json_cli):
         Entry(self.main_frame, textvariable=self.filename).pack(side="left",fill="x")
         Button(self.main_frame,text = "Browse", command = self.browse_file).pack(side="left")
         Button(self.main_frame,text = "Show", command = self.show_file).pack(side="left")
-        Button(self.main_frame,text = "Input", command = self.input_file).pack(side="left")
-        Button(self.main_frame,text = "Dump", command = self.dump).pack(side="left")
         self.main_frame.pack(side="top", fill="x")
         return
     
@@ -27,12 +25,7 @@ class json_gui(json_cli):
         self.main_frame.pack(side="top", fill="x")
 
         return
-
-    def get_field(self, field):
-        Label(self.data_frame,text=field['name']).grid(0,0)
-        Entry(self.main_window).grid(0,1)
-        self.data_frame.pack(fill="x")
-              
+          
     def render(self, level, type, key, value, path):
         label_name = "{}: {}({}): {}".format(level, path, type,  value)
         Label(self.data_frame,text=label_name).pack()
@@ -45,23 +38,13 @@ class json_gui(json_cli):
     
     
     def show_file(self):
-        self.setmode("SHOW")
-        
         if hasattr(self, 'data_frame'):
             self.data_frame.destroy()
         self.data_frame = Frame(self.main_window)
         
         self.load_file(self.filename.get())
         return
-    def input_file(self):
-        self.setmode("READ")
-        
-        if hasattr(self, 'data_frame'):
-            self.data_frame.destroy()
-        self.data_frame =Frame(self.main_window) 
-        
-        self.load_file(self.filename.get())
-        return
+    
 if __name__ == '__main__':
     clas = json_gui()
     clas.main_window.mainloop()

@@ -2,11 +2,9 @@ import json, os
 import re, types
 
 class json_cli():
-    def setmode(self,  mode):
-        self .mode= mode
+    def __init__(self):
         self.fields = {}
-        return
-
+        
     def handle_pair(self, level, key, value, path=None):
         type = self.get_type(value)
 
@@ -14,11 +12,6 @@ class json_cli():
             path +="/"+key
         else:
             path =key
-
-        if self.mode== "READ":
-            if key == "parameters" and type==list:
-                for item in value:
-                    self.get_field(item)
 
         if type == dict:
             for item in value:
@@ -28,16 +21,8 @@ class json_cli():
                 self.handle_pair(level+1, "list/" + 
                                  str(value.index(i)),i,  path)
         else:
-            if self.mode == "SHOW":
-                self.render(level, type, key, value, path)
+            self.render(level, type, key, value, path)                
         return
-
-    def get_field(self,  field):
-        print('Enter {}: '.format(field.get('name')))
-        input_value = input()
-
-        self.fields[field.get('name')]= input_value
-        return 
 
     
     def get_type(self, value):
@@ -82,8 +67,6 @@ class json_cli():
         
 if __name__ == "__main__":
     temp = json_cli()
-    temp.setmode( "SHOW")
     temp.load_file("samples/basic.txt")
-    #temp.dump_file("values_json_cli.json")
-
+    input()
     

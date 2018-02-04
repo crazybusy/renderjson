@@ -11,12 +11,8 @@ logger = logging.getLogger(__name__)
 
 #------------------Functions--------------------------------------
 def load_file(data_file):
-    if os.path.isfile(data_file):
-        with open(data_file) as infile:
+    with open(data_file) as infile:
             return json.load(infile)
-    else:
-        logger.debug("File {} not found".format(data_file))
-    return 
 
 PARAMETERS_STRING = "parameters"
 URL_STRING = 'url'
@@ -32,7 +28,7 @@ if __name__ == "__main__":
 
     logger.debug("Input parameters:{}".format(args))
 
-    if options.file:
+    if os.path.isfile(options.file):
         data = load_file(str(options.file))    
         
         parameters = data[PARAMETERS_STRING]
@@ -44,5 +40,4 @@ if __name__ == "__main__":
         url += urllib.parse.urlencode(parameters)
         
         show_result = json_cli()
-        show_result.setmode("SHOW")
         show_result.load_data(requests.get(url).json())

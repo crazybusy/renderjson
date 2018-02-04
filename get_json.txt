@@ -3,7 +3,7 @@
 "Description": "Generic utility for interacting with JSON API's on the web",
 "parameters":{
 "file":{
-"short": "-f", "long":"--file", "type":"string",
+"short": "-f", "long":"--file", "type":"string", "default":"apis/mapsearch.txt",
 "help": "File that contains the json parameters for the api"
 }
 }

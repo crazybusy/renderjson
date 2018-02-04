@@ -19,8 +19,7 @@ python get_json -f /path/to/mapseach.json
 If you specify some arguements on the command line, it'll search for those instead of the default value on file. E.g.
 python get_json -f /path/to/mapseach.json Your search string here
 
-<h1>json_cli</h1> is a utlity to display json files on the command line in a readabe format. It basically displays the keys that have values in a YAML like format. The objective is to CSS these somehow and render the json directly using CSS. The paths (XPATH like) displayed should support easy templating using CSS or bootstrap. It contains what could become the beginings of JsonForms i.e. Forms created directly in Json and controlled by a generic controller for simple applications.
-
+<h1>json_cli</h1> is a utlity to display json files on the command line in a readabe format. It basically displays the keys that have values in a YAML like format. The objective is to CSS these somehow and render the json directly using CSS. The paths/keys (XPATH like) displayed should support easy templating using CSS. 
 <h4>Sample JSON</h4>
 {
     "title": "Person",
