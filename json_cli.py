@@ -48,11 +48,10 @@ class json_cli():
         return
 
     def load_file(self, data_file):
-        if os.path.isfile(data_file):
-            with open(data_file) as infile:
-                self.all_data = json.load(infile)
+        with open(data_file) as infile:
+            self.all_data = json.load(infile)
 
-                self.handle_pair( 0, "", self.all_data)
+            self.handle_pair( 0, "", self.all_data)
         return
     def load_data(self, all_data):
         self.handle_pair( 0, "", all_data)
@@ -63,10 +62,19 @@ class json_cli():
                 json.dump(self.fields, outfile)
         return
 
-
-        
+import sys
+PARAMETERS_FILE = 'json_cli.txt'        
 if __name__ == "__main__":
+
+    from simple_parameters import simple_parameters
+    parser = simple_parameters.SimpleParser(PARAMETERS_FILE )
+    (options, args) = parser.resolve_parameters(sys.argv)
+
+    print(options.file)
     temp = json_cli()
-    temp.load_file("samples/basic.txt")
+    if options.file:
+        temp.load_file(options.file)
+    else:
+        temp.load_file("samples/basic.txt")
     input()
     

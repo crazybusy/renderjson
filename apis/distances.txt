@@ -4,8 +4,8 @@
 "parameters":{
 	"key": "AIzaSyD0H_G1JKCgklUtvDFVcdoMtto3ooyalZ8",        
 	"units":"imperial",
-	"origins":"28.654448,77.18402863",
-	"destinations":"28.589346,77.12076569"
+	"origins":"34.0209141,-118.2855371",
+	"destinations":"34.021955,-118.283894"
 
 }
 }
