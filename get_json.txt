@@ -1,6 +1,7 @@
 {
 "version": "1.0",
 "Description": "Generic utility for interacting with JSON API's on the web",
+"deps":["simple_parameters"],
 "parameters":{
 "file":{
 "short": "-f", "long":"--file", "type":"string", "default":"apis/mapsearch.txt",

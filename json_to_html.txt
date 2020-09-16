@@ -1,11 +1,11 @@
 {
 "version": "1.0",
-"Description": "Generic utility for displaying json files",
+"Description": "Display json files as html",
 "deps":["simple_parameters"],
 "parameters":{
 "file":{
 "short": "-f", "long":"--file", "type":"string", "default":"apis/mapsearch.txt",
-"help": "JSON file to be shown on the command line"
+"help": "JSON file to be shown as html"
 }
 }
 }
