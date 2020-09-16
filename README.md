@@ -39,9 +39,9 @@ python get_json -f /path/to/mapseach.json Your search string here
     },
     "required": ["firstName", "lastName"]
 }
-<h4Output by json_cli</h4> using 
+<h4>Output by json_cli</h4> using 
 python json_cli.py samples/basic.txt
-
+<Nesting level>: <Full path> (<type>): <value>
 1: title(<class 'str'>): Person
 1: type(<class 'str'>): object
 3: properties/firstName/type(<class 'str'>): string
